@@ -1,0 +1,18 @@
+.coll{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 20vh; /* Pleine hauteur de la fenêtre */
+}
+
+.card{
+    width: 500px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+}
+.canvaC{
+    height: 250px;
+}

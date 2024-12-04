@@ -1,0 +1,319 @@
+.head {
+    background-color: #111321;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
+    position: relative;
+    border-radius: 30px; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 7px;
+}
+
+.head:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: border-bottom 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100%; /* Nécessaire pour le centrage vertical si le parent a une hauteur définie */
+  }
+
+.containerr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Optionnel : ajuster la largeur des deux sections */
+  .containerr .form {
+    flex: 1; /* Prend une proportion égale */
+    padding: 50px; /* Pour ajouter un peu d'espace */
+  }
+  
+
+footer {
+    background-color: #111321;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema escuro */
+body.dark-mode {
+    --background-color: #424769; /* Dark gray background */
+    --text-color: #FFFFFF; /* White text color */
+    --project-background-color: #2B2B2B; /* Dark gray for project backgrounds */
+    --button-background-color: #2B2B2B; /* Dark gray button background */
+    --button-text-color: #FFFFFF; /* White button text color */
+    --primary-color: #111321; /* Green for primary elements */
+}
+
+.theme-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.theme-icon:hover {
+    color: #111321;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contato-button {
+    position: relative;
+    background-color: #fff;
+    color: #111321;
+    border: none;
+    padding: 15px 30px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contato-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: 2px solid #111321;
+    transform: scale(1);
+    opacity: 1;
+    animation: pulseBorder 2s infinite;
+}
+
+@keyframes pulseBorder {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.0;
+    }
+}
+
+@keyframes blinkEffect {
+    0%, 100% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: #fff;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+
+ a {
+	 text-decoration: none;
+	 color: #fff;
+	 transition: 0.5s ease;
+}
+ a:hover {
+	 color: #fff;
+}
+ .form {
+	 background: #111321;;
+	 padding: 40px;
+	 max-width: 600px;
+	 margin: 40px auto;
+	 border-radius: 15px;
+	 box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
+}
+ .tab-group {
+	 list-style: none;
+	 padding: 0;
+	 margin: 0 0 40px 0;
+}
+ .tab-group:after {
+	 content: "";
+	 display: table;
+	 clear: both;
+}
+ .tab-group li a {
+	 display: block;
+	 text-decoration: none;
+	 padding: 15px;
+	 background: rgba(160, 179, 176, .25);
+	 color: #a0b3b0;
+	 font-size: 20px;
+	 float: left;
+	 width: 48%;
+	 text-align: center;
+	 cursor: pointer;
+	 transition: 0.5s ease;
+}
+ .tab-group li a:hover {
+	 background: #df8a30;
+	 color: #fff;
+}
+ .tab-group .active a {
+	 background: #df8a30;
+	 color: #fff;
+}
+ .tab-content > div:last-child {
+	 display: none;
+}
+.tab-group{
+  border-radius: 15px!important;
+  margin: 20px;
+}
+ h2 {
+	 text-align: center;
+	 color: #fff;
+     font-size: 32px;
+	 font-weight: 600;
+	 margin: 0 0 40px;
+}
+ input, textarea {
+	 font-size: 17px;
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 padding: 5px 10px;
+	 background: none;
+	 background-image: none;
+	 border: 1px solid #df8a30;
+	 color: #fff;
+	 border-radius: 6px;
+	 transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+ textarea {
+	 border: 2px solid #df8a30;
+	 resize: vertical;
+}
+ .field-wrap {
+	 position: relative;
+	 margin-bottom: 40px;
+}
+ .top-row:after {
+	 content: "";
+	 display: table;
+	 clear: both;
+}
+ .top-row > div {
+	 float: left;
+	 width: 48%;
+	 margin-right: 4%;
+}
+ .top-row > div:last-child {
+	 margin: 0;
+}
+ .button {
+	 border: 0;
+	 outline: none;
+	 border-radius: 15px;
+	 padding: 15px 0;
+	 font-size: 20px;
+	 font-weight: 400;
+	 letter-spacing: 0.1em;
+	 background: #df8a30;
+   cursor: pointer;
+	 color: #fff;
+	 transition: all 0.5s ease;
+	 -webkit-appearance: none;
+}
+ .button:hover, .button:focus {
+	 background: #df8a30;
+}
+ .button-block {
+	 display: block;
+	 width: 100%;
+}
+ .forgot {
+	 margin-top: -20px;
+	 text-align: right;
+}
+
+#signUp{
+    border-radius: 15px!important;
+    margin-right:8x;
+}
+
+#logIn{
+    border-radius: 15px!important;
+    margin-left:8px;
+}
+
+.cardimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.par{
+    font-size: 30px;
+    text-align: center;
+    margin-top: -150px;
+    margin-left: -30px;
+}

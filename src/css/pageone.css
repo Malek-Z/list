@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+    --primary-color: #111321; /* Yellow for primary elements */
+    --background-color: #fff; /* Light brown background */
+    --text-color: #111321; /* Dark text color */
+    --project-background-color: #BAC2FE; /* Light blue for project backgrounds */
+    --button-background-color: #fff; /* White button color for light mode */
+    --button-text-color: #111321; /* Dark text color for light mode */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
+    position: relative;
+    border-radius: 30px; /* Rounded corners */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 7px; /* Add margin to move the header down */
+}
+
+header:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: border-bottom 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100%; /* Nécessaire pour le centrage vertical si le parent a une hauteur définie */
+  }
+
+.titre h1 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color:transparent;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+    gap: 60px; /* Espace entre image et texte */
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternance des positions */
+.card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Image Styling */
+.card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Text Styling */
+.card h2 {
+    font-size: 2rem;
+    color: #df8a30;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Animation au défilement */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rendre plus compact les divs */
+.card > div {
+    max-width: calc(100% - 140px); /* Ajuster pour limiter la largeur du texte */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema escuro */
+body.dark-mode {
+    --background-color: #424769; /* Dark gray background */
+    --text-color: #FFFFFF; /* White text color */
+    --project-background-color: #2B2B2B; /* Dark gray for project backgrounds */
+    --button-background-color: #2B2B2B; /* Dark gray button background */
+    --button-text-color: #FFFFFF; /* White button text color */
+    --primary-color: #111321; /* Green for primary elements */
+}
+
+.theme-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.theme-icon:hover {
+    color: var(--primary-color);
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.cardImage{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
